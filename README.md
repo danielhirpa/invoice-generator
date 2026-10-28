@@ -18,3 +18,10 @@ I built this project to make it easy to create, preview, and save invoices as a 
 ```bash
 git clone [https://github.com/danielhirpa/invoice-generator.git](https://github.com/danielhirpa/invoice-generator.git)
 cd invoice-generator
+## 👨‍💻 About Me
+
+**Daniel Hirpa**  
+*Front-End & Web Developer*  
+
+- **GitHub**: [@danielhirpa](https://github.com/danielhirpa)
+- **Focus**: Building interactive, user-focused web applications with React, Next.js, Tailwind CSS, Python, and Django REST Framework.
