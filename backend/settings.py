@@ -26,6 +26,10 @@ SECRET_KEY = 'django-insecure-+n7s(ums@)j8gmf5ktco#g!6))3in2-^567j-!74(3-w!+gg(j
 DEBUG = True
 
 ALLOWED_HOSTS = []
+# backend/settings.py
+
+# backend/settings.py
+
 INSTALLED_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
@@ -33,11 +37,13 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
     # Third-party apps
     'rest_framework',
     'corsheaders',
-    # Your custom app
-    'invoices',  # <--- Make sure this is present here
+    
+    # Local app
+    'backend',
 ]
 
 MIDDLEWARE = [
