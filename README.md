@@ -1,27 +1,80 @@
-# Freelance Invoice Generator
+ Full-Stack Invoice Generator
 
-I built this project to make it easy to create, preview, and save invoices as a freelance developer. It's a full-stack web app with a Next.js frontend and a Django REST Framework backend connected to a PostgreSQL database.
+A modern, full-stack web application designed to streamline billing, real-time calculations, and persistent record-keeping for freelancers and small businesses.
 
-## What I Built Into This
-- **Live Preview Editor**: A split-screen layout where filling out form fields updates a clean, professional invoice preview in real time.
-- **PDF Export**: Uses `html2canvas` and `jsPDF` so you can download a clean PDF copy directly from the browser.
-- **Django REST API**: Connected the Next.js frontend to a custom Django backend to handle data persistence for invoices and line items.
-- **Saved Invoices Dashboard**: Fetches and lists all records saved in the database right inside the sidebar.
 
-## Tech Stack
-- **Frontend**: Next.js (App Router, TypeScript), Tailwind CSS, Lucide React
-- **Backend**: Python, Django, Django REST Framework, PostgreSQL (with SQLite for local testing)
 
-## How to Run It Locally
+ Key Features
 
-### 1. Clone the repo
-```bash
-git clone [https://github.com/danielhirpa/invoice-generator.git](https://github.com/danielhirpa/invoice-generator.git)
+Dynamic Invoice Creation:** Interactive form interface with real-time total, tax, and itemized calculations.
+Persistent Record-Keeping:** Fully integrated backend ensuring every invoice and line item is stored securely in a relational database.
+Clean PDF & Print Export:** Optimized CSS layout for seamless PDF generation and print formatting directly from the browser.
+Decoupled Architecture:** Clean client-server separation using a Next.js frontend communicating with a Django REST API via JSON.
+
+
+
+ Tech Stack
+
+Frontend
+Framework:Next.js (App Router, Turbopack)
+Language:TypeScript / JavaScript
+Styling: Tailwind CSS / Modern CSS
+
+ Backend & Database
+Framework: Python, Django, Django REST Framework (DRF)
+Middleware:`django-cors-headers`
+Database: PostgreSQL (via `psycopg2-binary`)
+
+
+
+⚙️ Getting Started & Local Setup
+
+Follow these steps to set up and run the project locally.
+
+ Prerequisites
+Node.js: v18.x or higher
+Python: v3.10 or higher
+PostgreSQL:Installed and running locally or on a cloud host
+
+
+
+1. Repository Setup
+
+```powershell
+git clone [https://github.com/YOUR_USERNAME/invoice-generator.git](https://github.com/YOUR_USERNAME/invoice-generator.git)
 cd invoice-generator
-## 👨‍💻 About Me
+2. Backend Setup (Django & PostgreSQL)
+Activate your Python virtual environment:
 
-**Daniel Hirpa**  
-*Front-End & Web Developer*  
+PowerShell
+python -m venv venv
+.\venv\Scripts\Activate.ps1
+Install dependencies:
 
-- **GitHub**: [@danielhirpa](https://github.com/danielhirpa)
-- **Focus**: Building interactive, user-focused web applications with React, Next.js, Tailwind CSS, Python, and Django REST Framework.
+PowerShell
+pip install -r requirements.txt
+Ensure database migrations are applied:
+
+PowerShell
+python manage.py makemigrations
+python manage.py migrate
+Run the Django development server:
+
+PowerShell
+python manage.py runserver
+Backend API runs at http://localhost:8000/.
+
+3. Frontend Setup (Next.js)
+Open a new terminal window in the project root:
+
+Install Node modules:
+
+PowerShell
+npm install
+Run the Next.js development server:
+
+PowerShell
+npm run dev
+Frontend application runs at http://localhost:3000/.
+ License
+This project is open-source and available under the MIT License.
